@@ -1,0 +1,93 @@
+{
+  "users": {
+    "373134226": {
+      "nickname": "Supaman"
+    },
+    "790348895": {
+      "nickname": "Sam"
+    },
+    "1552447615": {
+      "nickname": "Sexy dick dong ding"
+    }
+  },
+  "sales": [
+    {
+      "operatorId": "373134226",
+      "operator": "Supaman",
+      "type": "single",
+      "girl": "Sarah",
+      "set": "Set 1",
+      "table": "V1",
+      "payment": "QR Code",
+      "amount": 50,
+      "invoice": "BTMKLG",
+      "reference": "Supaman-Sarah-BTMKLG",
+      "timestamp": "2025-08-25T18:42:34.795Z"
+    },
+    {
+      "operatorId": "790348895",
+      "operator": "Sam",
+      "type": "single",
+      "girl": "Test 1",
+      "set": "Set 1",
+      "table": "K2",
+      "payment": "QR Code",
+      "amount": 200,
+      "invoice": "Q37PYW",
+      "reference": "Sam-Test_1-Q37PYW",
+      "timestamp": "2025-08-25T18:44:34.015Z"
+    },
+    {
+      "operatorId": "790348895",
+      "operator": "Sam",
+      "type": "single",
+      "girl": "Test 2",
+      "set": "Set 2",
+      "table": "K1",
+      "payment": "QR Code",
+      "amount": 300,
+      "invoice": "AX56HQ",
+      "reference": "Sam-Test_2-AX56HQ",
+      "timestamp": "2025-08-25T18:45:30.334Z"
+    },
+    {
+      "operatorId": "1552447615",
+      "operator": "Sexy dick dong ding",
+      "type": "single",
+      "girl": "Regan",
+      "set": "Set 1",
+      "table": "55",
+      "payment": "QR Code",
+      "amount": 10000,
+      "invoice": "LXQJZL",
+      "reference": "Sexy_dick_dong_ding-Regan",
+      "timestamp": "2025-08-25T18:49:25.218Z"
+    },
+    {
+      "operatorId": "373134226",
+      "operator": "Supaman",
+      "type": "single",
+      "girl": "Bella",
+      "set": "Set 2",
+      "table": "V1",
+      "payment": "Cash",
+      "amount": 100,
+      "invoice": "BHNDF7",
+      "reference": null,
+      "timestamp": "2025-08-25T19:03:58.507Z"
+    },
+    {
+      "operatorId": "373134226",
+      "operator": "Supaman",
+      "type": "single",
+      "girl": "Mimi",
+      "set": "Set 2",
+      "table": "V12",
+      "payment": "QR Code",
+      "amount": 100,
+      "invoice": "G7GH6D",
+      "reference": "Supaman-Mimi-G7GH6D",
+      "timestamp": "2025-08-25T19:09:12.637Z"
+    }
+  ]
+}

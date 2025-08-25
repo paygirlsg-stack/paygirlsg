@@ -1,0 +1,19 @@
+{
+  "name": "huajiedao",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "paynowqr": "^1.1.2",
+    "qrcode": "^1.5.4",
+    "telegraf": "^4.16.3"
+  }
+}
