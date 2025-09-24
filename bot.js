@@ -16,6 +16,7 @@ import { Telegraf } from 'telegraf';
 import QRCode from 'qrcode';
 import fs from 'fs/promises';
 import path from 'path';
+import express from 'express';
 
 // ────────────────────────────────────────────────────────────────────────────
 // ENV / constants
@@ -989,9 +990,13 @@ app.use(express.json());
 app.get('/', (req,res)=>res.send('OK'));
 
 // Webhook endpoint
-app.post('/bot', (req,res,next)=>{
-  bot.handleUpdate(req.body, res).catch(next);
-  res.sendStatus(200);
+app.post('/bot', (req, res) => {
+  bot.handleUpdate(req.body)
+    .then(() => res.sendStatus(200))
+    .catch(err => {
+      console.error('Error handling update:', err);
+      res.sendStatus(500);
+    });
 });
 
 // Start Express
