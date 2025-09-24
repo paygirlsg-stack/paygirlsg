@@ -1000,4 +1000,13 @@ app.listen(PORT, ()=>console.log(`Server listening on port ${PORT}`));
 // ────────────────────────────────────────────────────────────────────────────
 // Launch
 // ────────────────────────────────────────────────────────────────────────────
-bot.launch().then(()=>console.log('✅ POS bot ready. Use /start → /sale, /history, /report'));
+// ────────────────────────────────────────────────────────────────────────────
+// Set webhook (Cloud Run will call /bot)
+// ────────────────────────────────────────────────────────────────────────────
+const WEBHOOK_URL = process.env.CLOUD_RUN_URL; // e.g., https://your-service-xyz.a.run.app
+
+if (WEBHOOK_URL) {
+  bot.telegram.setWebhook(`${WEBHOOK_URL}/bot`)
+    .then(() => console.log(`✅ Webhook set to ${WEBHOOK_URL}/bot`))
+    .catch(err => console.error('❌ Failed to set webhook:', err));
+}
