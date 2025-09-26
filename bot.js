@@ -38,6 +38,8 @@ const QR_LIFETIME_MS = 2 * 60 * 1000;       // QR auto delete
 const SALE_IDLE_TIMEOUT_MS = 2 * 60 * 1000; // sale session expire
 const MIN_AMOUNT = 100;                     // base minimum before +3%
 
+const date = new Date();
+
 // ────────────────────────────────────────────────────────────────────────────
 const bot = new Telegraf(BOT_TOKEN);
 
@@ -528,7 +530,7 @@ bot.action('sale_generate_qr', async (ctx)=>{
 
     DB.sales.push({ operatorId:uid, operator, company:companyName||null, type:'single',
       name:f.name, payment:'QR Code', amountBase:baseAmt, amount:payAmt,
-      transactionId:txnId, reference:ref, timestamp:new Date().toISOString()
+      transactionId:txnId, reference:ref, timestamp: new Date().toLocaleString("en-SG", { timeZone: "Asia/Singapore", hour12: false })
     });
     await saveDB();
 
