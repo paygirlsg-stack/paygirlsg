@@ -309,7 +309,7 @@ function renderTableRows(rows){
 }
 function csvEscape(s=''){ s=String(s); return (/[",\n]/.test(s))?`"${s.replace(/"/g,'""')}"`:s; }
 async function writeCsvFile(rows){
-  const header=['Timestamp','Sales Person','Flower Value (NET)','Method','TxnID','Name/Table'];
+  const header=['Date','Time','Sales Person','Flower Value (NET)','Method','TxnID','Name/Table'];
   const lines=[header.join(',')];
   let subtotal=0;
   for (const r of rows){
